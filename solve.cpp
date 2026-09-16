@@ -36,27 +36,25 @@ const int MOD = 1000000007;
 
 // ── debug:交出去之前不用刪,它只在本機有作用 ──────────
 #ifdef LOCAL
-    #define dbg(x) cerr << #x << " = " << (x) << endl
+#define dbg(x) cerr << #x << " = " << (x) << endl
 #else
-    #define dbg(x)
+#define dbg(x)
 #endif
-
+// ────────────────────────────────────────────────
 void solve() {
-    int n;
-    cin >> n;
-    vector<ll> a(n);
-    for (auto &x : a) cin >> x;
 
-    dbg(n);
-    cout << accumulate(all(a), 0LL) << "\n";
+
+
+
+
+
 }
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int T = 1;
-    cin >> T;                 // ← 單筆測資的題目,把這行註解掉
+    // cin >> T;                 // ← 單筆測資的題目,把這行註解掉
     while (T--) solve();
     return 0;
 }
