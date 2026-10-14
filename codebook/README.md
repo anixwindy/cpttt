@@ -73,7 +73,7 @@
 ## §3 全部重新驗證(換編譯器 / 改過模板之後)
 
 ```
-cd /d/2D_RIEE
+cd /d/cpttt
 for %f in (codebook\*\*.cpp) do g++ -std=c++20 -O2 -Wall -o nul "%f"
 ```
 
