@@ -2,7 +2,7 @@
 //  dbg() 示範檔 —— 這不是題目,是教學用的
 //
 //  怎麼跑:
-//    1. 這個檔 Ctrl+A 全選 -> Ctrl+C -> 貼到 D:\2D_RIEE\solve.cpp
+//    1. 這個檔 Ctrl+A 全選 -> Ctrl+C -> 貼到 D:\cpttt\solve.cpp
 //    2. in.txt 我已經幫你放好測資了(3 / 1 2 3)
 //    3. 按 ▶
 //
