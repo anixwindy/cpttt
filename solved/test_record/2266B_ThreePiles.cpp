@@ -1,7 +1,6 @@
-//
-//
-//
-//236A - Boy or Girl
+// Alice and Bob / 三堆石頭 賽局 (CF, 題號自己補)
+// 坑1:賦值是拍照不是連線 -- ffin 先算完,之後改 x 是白改的。
+// 坑2:「落後就不拿」是錯的 -- c 夠大時 Alice 拿光會超車。反例 a=0 b=1 c=3 -> 2。
 #if defined(__GNUC__) && !defined(__clang__)
     #include <bits/stdc++.h>          // GCC / MinGW(CLion 走這條)
 #else
@@ -56,39 +55,24 @@ const int MOD = 1000000007;
 #endif
 // ────────────────────────────────────────────────
 void solve() {
-     string s;
-     cin>>s;
+    ll a, b, c;
+    cin >> a >> b >> c;
 
+    // 候選①:Alice 第一手拿光 c。礦場空了,雙方只能拿 0 -> 立刻結束。
+    ll takeAll  = llabs(a + c - b);
+    // 候選②:Alice 拿 0。此時 Bob 拿任何石頭都只會讓 |A-B| 變大,
+    //         所以 Bob 也拿 0 -> 連兩手 0 -> 結束,石頭數維持原樣。
+    ll takeNone = llabs(a - b);
 
-
-
-     vector<char> a;                          // 已經收集到的「不同字元」
-
-     for (int i = 0; i < sz(s); i++) {        // 外層:逐一讀 s 的每個字元
-         bool found = false;   // ❌ 放在外層迴圈「外面」// ★ 修正③ 旗標,每個 i 重置一次
-         //重點 就下面這一行
-         for (int j = 0; j < sz(a); j++) {    // ★ 修正① 掃的是 a,不是 s
-             if (s[i] == a[j]) {
-                 found = true;
-                 break;                       // 撞到了,不用再看下去
-             }
-         }
-         if (!found) a.pb(s[i]);
-         // ★ 修正② 存的是s[i],且寫在內層迴圈「外面」
-     }
-
-     if (sz(a) % 2 == 0) cout << "CHAT WITH HER!\n";
-     else                cout << "IGNORE HIM!\n";
+    // Alice 是 max 玩家,先手,兩個結局她都能單方面選 -> 挑大的。
+    cout << max(takeAll, takeNone) << '\n';
 }
-
-
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int T = 1;
-    // cin >> T;                 // ← 單筆測資的題目,把這行註解掉
+    cin >> T;                 // ← 單筆測資的題目,把這行註解掉
     while (T--) solve();
     return 0;
 }

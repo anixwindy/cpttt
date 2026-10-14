@@ -1,4 +1,4 @@
-//236A - Boy or Girl
+
 #if defined(__GNUC__) && !defined(__clang__)
     #include <bits/stdc++.h>          // GCC / MinGW(CLion 走這條)
 #else
@@ -28,6 +28,8 @@ using ll  = long long;
 using ull = unsigned long long;
 using pii = pair<int,int>;
 using pll = pair<ll,ll>;
+using mii = map<int,int>;
+using mll = map<ll,ll>;
 using vi  = vector<int>;
 using vll = vector<ll>;
 template<class T> using vec = vector<T>;            // macro 做不到的
@@ -52,11 +54,19 @@ const int MOD = 1000000007;
 #define dbg(x)
 #endif
 // ────────────────────────────────────────────────
+
+#include <cctype>
 void solve() {
+    string s;
+    cin >> s;
+    s[0] = toupper(s[0]);
+    cout<< s << '\n';
 
 
 
-    
+
+
+
 }
 int main() {
     ios::sync_with_stdio(false);
