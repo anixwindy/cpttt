@@ -10,6 +10,8 @@ start_claudee.ps1
 seesee.md
 *_對話*.md
 對話*.md
+_old/CLAUDE_*.md
+godot_plan.md
 
 # ── 舊 CP 存放區：本機自己留著，不上公開 repo ──
 CP_old/
@@ -57,4 +59,3 @@ cmake_install.cmake
 shots/
 *.gif
 *.mp4
-_old/CLAUDE_*.md
