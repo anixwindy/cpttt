@@ -57,6 +57,24 @@ const int MOD = 1000000007;
 
 
 void solve() {
+    ll k,n,w;
+    cin >> k >> n >> w;
+    ll a=0;//借錢
+    ll b=0;//總費用
+    ll st= n+a;//手上總錢
+    for (ll i=1 ; i<(w+1);i++) {
+
+         b+=(k*i);
+
+    }
+    a=b-st;
+    if (a<0) {
+        cout<<"0"<<'\n';
+    }
+   else {
+       cout<<a<<'\n';
+   }
+
 
 
 
